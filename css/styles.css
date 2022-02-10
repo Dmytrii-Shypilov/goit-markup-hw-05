@@ -709,6 +709,10 @@ img {
     background-color: var(--background-primary);
 }
 .modal-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     position: absolute;
     top: 8px;
     right: 8px;
@@ -720,8 +724,7 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-                border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -734,6 +737,15 @@ img {
 }
 .modal-button:hover,
 .modal-button:focus {
-    color: var(--active-color);
     border-color: var(--active-color);
+}
+.modal-button:hover .cross-icon,
+.modal-button:focus .cross-icon {
+    fill: var(--active-color);
+}
+
+.cross-icon {
+    fill: #000000;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
